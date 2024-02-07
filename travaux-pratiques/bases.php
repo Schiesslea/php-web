@@ -101,7 +101,34 @@
             <i class="bi bi-filetype-exe fs-2 text-warning text-bold"></i>
             <div class="bg-black rounded-4 p-3 flex-fill">
                 <!-- Votre code -->
-
+                <table class="table table-primary">
+                    <thead>
+                    <tr>
+                        <th class="text-warning" scope="col">Prénom</th>
+                        <th class="text-warning" scope="col">Nom</th>
+                        <th class="text-warning" scope="col">Email</th>
+                        <th class="text-warning" scope="col">Premium</th>
+                        <th class="text-warning" scope="col">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($comptes as $compte) : ?>
+                        <tr>
+                            <td><?= $compte["prenom"] ?></td>
+                            <td><?= $compte["nom"] ?></td>
+                            <td><?= $compte["email"] ?></td>
+                            <td><?= $compte["premium"] ? "oui" : "non" ?></td>
+                            <td>
+                                <button type="button" class="btn btn-danger">Supprimer</button>
+                                <button type="button" class="btn btn-warning">Modifier</button>
+                                <?php if ($compte ['premium'] == false) : ?>
+                                    <button type="button" class="btn btn-success">Premium</button>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -123,7 +150,27 @@
             <i class="bi bi-filetype-exe fs-2 text-warning text-bold"></i>
             <div class="bg-black rounded-4 p-3 flex-fill">
                 <!-- Votre code -->
+                <?php foreach ($comptes
 
+                               as $compte) : ?>
+                    <div class="card border-dark mb-3" style="max-width: 20rem;">
+                        <div class="card-body">
+                            <h4 class="card-title"><?= $compte["prenom"] ?> <?= $compte["nom"] ?></h4>
+                            <p class="card-text"><?= $compte["email"] ?></p>
+                            <p> <?= $compte["premium"] ? "Premium" : "Non premium" ?></p>
+                            <p class="card-text">
+                                <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                                <button type="button" class="btn btn-warning"><i class="bi bi-pencil-square"></i>
+                                </button>
+                                <?php if ($compte ['premium'] == false) : ?>
+                                    <button type="button" class="btn btn-success"><i class="bi bi-currency-euro"></i>
+                                    </button>
+                                <?php endif; ?>
+                            </p>
+
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>

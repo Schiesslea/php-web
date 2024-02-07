@@ -31,6 +31,7 @@
                        aria-haspopup="true" aria-expanded="false">Travaux pratiques</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="../travaux-pratiques/bases.php">PHP - Bases</a>
+                        <a class="dropdown-item" href="../travaux-pratiques/bd-sql.php">Base de données</a>
                     </div>
                 </li>
             </ul>
