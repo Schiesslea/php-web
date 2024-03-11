@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Le formulaire a été soumis !
     // Traiter les données du formulaire
     // Récupérer les valeurs saisies par l'utilisateur
-    // Suoerglobale $_POST : tableau associatif
+    // Superglobale $_POST : tableau associatif
     $prenom = $_POST['prenom'];
     $nom = $_POST['nom'];
     $email = $_POST['email'];
