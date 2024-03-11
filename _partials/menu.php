@@ -24,6 +24,7 @@
                         <a class="dropdown-item" href="../php/structures-conditionnelles.php">Structures
                             conditionnelles</a>
                         <a class="dropdown-item" href="../php/boucles-tableaux.php">Boucles et tableaux</a>
+                        <a class="dropdown-item" href="../php/formulaire.php">Formulaire</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
